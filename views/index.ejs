@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDS - Xuân Tình Nguyện</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!--fontawesome-->
+    <script src="lib/font-awesome/a551d42fb3.js"></script>
+    <!-- momentjs -->
+    <script src="lib/momentjs/moment-with-locales.js"></script>
+    <!-- google capcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--thay link khac vao -->
+    <!-- Favicons -->
+    <link href="img/logo-xuan-tinh-nguyen.png" rel="icon">
+    <link href="img/logo-xuan-tinh-nguyen.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="/css/google-fonts.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C500%2C600%2C700%2C900&ver=1.0" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/venobox/venobox.css" rel="stylesheet">
+    <!-- Nivo Slider Theme -->
+    <link href="css/nivo-slider-theme.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Responsive Stylesheet File -->
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <div id="preloader"></div>
+    <header>
+        <!-- header-area start -->
+        <div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- Navigation -->
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false"> <span
+                              class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                              class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                <!-- Brand -->
+                                <a class="navbar-brand page-scroll sticky-logo">
+                                    <!-- Uncomment below if you prefer to use an image logo -->
+                                    <img src="img/hsv.png" alt="" title="" class="img-logo">
+                                    <!--<img src="img/logo-xuan-tinh-nguyen.png" alt="" title="" class="img-logo"> -->
+                                    <img src="img/logoa.png" alt="" title="" class="img-logo">
+                                </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"> <a class="page-scroll" href="#home">Trang chủ</a> </li>
+                                    <li> <a class="page-scroll" href="#about">Giới thiệu</a> </li>
+                                    </li>
+                                    <li> <a class="page-scroll" href="#blog">Hoạt động</a> </li>
+                                    <li> <a class="page-scroll" href="#portfolio">Sản phẩm</a> </li>
+                                    <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down<span class="caret"></span></a><ul class="dropdown-menu" role="menu">  <li><a href=# >Drop Down 1</a></li>  <li><a href=# >Drop Down 2</a></li></ul>   </li> -->
+                                    <li> <a class="page-scroll" href="/teams">Đội hình</a> </li>
+                                    <li> <a class="page-scroll" href="#contact">Liên hệ</a> </li>
+                                    <li class="checkout"> <a class="page-scroll"><i class="fas fa-shopping-cart"></i></a>
+                                        <div class="shop-panel">
+                                            <ul class="shop-list">
+                                                <ul class="shop-item-add">
+                                                    <li class="shop-title">
+                                                        <span class="shop-item-name">Tên sản phẩm </span>
+                                                        <span class="shop-item-num"> Số lượng</span>
+                                                    </li>
+                                                    <%var cart = data.cart ; if(!cart){%>
+                                                        <p class="text-center">Không có sản phẩm nào trong giỏ hàng</p>
+                                                        <%} else{%>
+                                                            <% for(item of cart){if(item){%>
+                                                                <li class="shop-item" item-id="<%=item.id%>" price="<%=item.price%>">
+                                                                    <div class="shop-remove-item" id="<%=item.id%>">
+                                                                        <i class="far fa-trash-alt"></i> Xóa sản phẩm
+                                                                    </div>
+                                                                    <span class="shop-item-name"><%=item.name%></span>
+                                                                    <span class="shop-item-num"><%=item.number%></span>
+                                                                </li>
+                                                                <%}}%>
+                                                                    <li class="shop-checkout">
+                                                                        <a class="shop-btn-checkout" data-toggle="modal" data-target="#confirmCheckout">Thanh Toán <i
+                                                class="fas fa-money-check"></i></a>
+                                                                    </li>
+                                                </ul>
+                                                <%}%>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <!-- <li><a class="page-scroll btn-login" href="#contact">Đăng nhập</a>  </li> -->
+                                </ul>
+                            </div>
+                            <!-- navbar-collapse -->
+                        </nav>
+                        <!-- END: Navigation -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- confirmCheckout modal -->
+        <div class="modal fade" id="confirmCheckout" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- checkout form-->
+                <form class="modal-content" id="checkout-form" action="/checkout" method="POST">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Xác nhận mua hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="">Họ và Tên:</label>
+                            <input type="text" class="form-control user-name" name="name" id="" aria-describedby="helpId" placeholder="Nguyễn Văn A">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Thông tin liên hệ:</label>
+                            <input type="text" class="form-control user-contact" name="contact" id="" aria-describedby="helpId" placeholder="Số điện thoại (hoặc email)">
+                            <small id="helpId" class="form-text text-muted">Để chúng mình có thể liên lạc được với bạn nhanh nhất.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Địa chỉ giao hàng:</label>
+                            <input type="text" class="form-control user-address" name="address" id="" aria-describedby="helpId" placeholder="Đại học CNTT">
+                            <small id="helpId" class="form-text text-muted">Nhập chính xác nơi bạn muốn nhận hàng.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ghi chú (nếu có):</label>
+                            <input type="text" class="form-control user-note" name="note" id="" aria-describedby="helpId" placeholder="">
+                        </div>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody class="checkout-list">
+
+                            </tbody>
+                        </table>
+
+                        <div class="g-recaptcha" data-sitekey="6Lcv6MQUAAAAAD5pj06lwKFhVyEw528imOVhoSct"></div>
+                        <br>
+                        <!-- key capcha  -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-thanhtoan" type="submit">Thanh toán</button>
+                        <!-- <input type="submit" value="send"> -->
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- header-area end -->
+    </header>
+
+    <!-- header end -->
+    <!-- Start Slider Area -->
+    <div id="home" class="slider-area">
+        <div class="bend niceties preview-2">
+            <div id="ensign-nivoslider" class="slides"> <img src="img/009.jpg" alt="" title="#slider-direction-1" /> <img src="img/006.jpg" alt="" title="#slider-direction-2" /> <img src="img/003.jpg" alt="" title="#slider-direction-3" /> </div>
+            <!-- direction 1 -->
+            <div id="slider-direction-1" class="slider-direction slider-one">
+                <div class="container count-down-field">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 count-down-wrap">
+                            <div class="slider-content">
+                                <!-- layer 1 -->
+                                <div class="layer-1-1 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <h2 class="title1">XUÂN TÌNH NGUYỆN SẼ DIỄN RA:</h2>
+                                </div>
+                                <!-- layer 2 -->
+                                <div class="layer-1-2 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                                    <div class="title2 countdown">
+                                        <div class=count-number>
+                                            <div class="num-days">10</div>
+                                            <div class="count-text"> Ngày</div>
+                                        </div>
+                                        <div class=count-number>
+                                            <div class="num-hours">10</div>
+                                            <div class="count-text"> Giờ</div>
+                                        </div>
+                                        <div class=count-number>
+                                            <div class="num-minutes">10</div>
+                                            <div class="count-text"> Phút</div>
+                                        </div>
+                                        <div class=count-number>
+                                            <div class="num-seconds">10</div>
+                                            <div class="count-text"> Giây</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- layer 3 -->
+                                <div class="layer-1-3 hidden-xs wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s"> <a class="ready-btn right-btn page-scroll" href="/blog">Hoạt động</a> <a class="ready-btn page-scroll" href="#portfolio">Sản phẩm</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider Area -->
+    <!-- Start About area -->
+
+    <div id="about" class="about-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <h2>Xuân Tình Nguyện 2020</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single-well start-->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="well-left">
+                        <div class="single-well">
+                            <!--<a href="#"> <img src="img/about/banner-xtn-2020.jpg" alt=""> </a>-->
+                            <iframe width="100%" height="350px" src="https://www.youtube.com/embed/fdb9AQiI-sE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-well end-->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="well-middle">
+                        <div class="single-well">
+                            <a>
+                                <h4 class="sec-head">Giới thiệu</h4>
+                            </a>
+                            <p>Xuân Tình Nguyện là chiến dịch thường niên của Trường Đại học Công nghệ Thông tin TP.HCM, với mong muốn mang lại một mùa xuân tràn ngập yêu thương đến người dân và các em học sinh có hoàn cảnh khó khăn tại địa bàn. </p>
+                            <ul>
+                                <li> <i class="fa fa-check"></i> Interior design Package </li>
+                                <li> <i class="fa fa-check"></i> Building House </li>
+                                <li> <i class="fa fa-check"></i> Reparing of Residentail Roof </li>
+                                <li> <i class="fa fa-check"></i> Renovaion of Commercial Office </li>
+                                <li> <i class="fa fa-check"></i> Make Quality Products </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End col-->
+            </div>
+        </div>
+    </div>
+    <!-- awesome-portfolio end -->
+    <!-- Start Testimonials -->
+    <div class="section-headline text-center" id="team">
+        <h2>Ban Chỉ Huy</h2>
+    </div>
+    <div class="testimonials-area">
+        <div class="testi-inner area-padding">
+            <div class="testi-overly"></div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class=" text-center">
+                            <div class=" container">
+                                <div class="single-testi row">
+                                    <div class="col-sm-4">
+                                        <a class="quate" href="#"><img src="img/team/2.jpg" class="admin-image"></a>
+                                        <div class="testi-text">
+                                            <h2 class="admin-name">Dương Công Vũ</h2>
+                                            <h4 class="admin-role">Chỉ huy trưởng</h4>
+                                            <h6>Just a leader</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <a class="quate" href="#"><img src="img/team/1.jpg" class="admin-image"></a>
+                                        <div class="testi-text">
+                                            <h2 class="admin-name">Lê Hữu Trung</h2>
+                                            <h4 class="admin-role">Chỉ huy chỉ huy trưởng</h4>
+                                            <h6>Leader of leader :))</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <a class="quate" href="#"><img src="img/team/3.jpg" class="admin-image"></a>
+                                        <div class="testi-text">
+                                            <h2 class="admin-name">Nguyễn Ngọc Trúc Ly</h2>
+                                            <h4 class="admin-role">Osin Team</h4>
+                                            <h6>Secretary</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End testimonials end -->
+                    </div>
+                    <!-- End Right Feature -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+    <!-- Start team Area -->
+    <!-- End About area -->
+    <div id="team" class="our-team-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <h2>Gương mặt xuất sắc</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="team-top">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-team-member">
+                            <div class="team-img">
+                                <p> <img src="img/team/1.jpg" alt=""> </p>
+                                <div class="team-social-icon text-center">
+                                    <ul> </ul>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Lê Hữu Trung</h4>
+                                <p>Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End column -->
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-team-member">
+                            <div class="team-img">
+                                <p> <img src="img/team/2.jpg" alt=""> </p>
+                                <div class="team-social-icon text-center">
+                                    <ul> </ul>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Vương Đức Quân</h4>
+                                <p>Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End column -->
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-team-member">
+                            <div class="team-img">
+                                <p> <img src="img/team/3.jpg" alt=""> </p>
+                                <div class="team-social-icon text-center">
+                                    <ul> </ul>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Nguyễn Quang Huy</h4>
+                                <p>Web Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End column -->
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-team-member">
+                            <div class="team-img">
+                                <p> <img src="img/team/4.jpg" alt=""> </p>
+                                <div class="team-social-icon text-center">
+                                    <ul> </ul>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Ngô Quang Vinh</h4>
+                                <p>Web Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End column -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Blog Area -->
+    <div id="blog" class="blog-area">
+        <div class="blog-inner area-padding">
+            <div class="blog-overly"></div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h2>Hoạt động gần đây</h2>
+                        </div>
+                    </div>
+                </div>
+                <% if(!data.events){%>
+                    <div class="row">
+                        <h2 class="text-center">
+                            <%=err%>
+                        </h2>
+                    </div>
+                    <%} else{events = data.events%>
+                        <div class="row card-deck">
+                            <!-- Start Left Blog -->
+                            <%for(i=events.length-1; i>events.length-4; i--){ event = events[i];
+  if(event){%>
+                                <div class="col-md-4 col-sm-4 col-xs-12 card">
+                                    <div class="single-blog">
+                                        <div class="single-blog-img"> <a href="details/<%=event._id%>"> <img
+                                                      src="<%=event.image%>" alt=""> </a> </div>
+                                        <div class="blog-meta-1"> <span class="comments-type"> <i
+                                                      class="fa fa-user-o"></i> <a><%=event.author%></a>
+                                                </span> <span class="date-type"> <i class="fa fa-calendar"> </i>
+                                                   <%= event.openString%>
+                                                </span> </div>
+                                        <div class="blog-text">
+                                            <h4> <a href="details/<%=event._id%>"><%=event.title.length>65?event.title.substring(0,65)+"...":event.title%></a>
+                                            </h4>
+                                            <p>
+                                                <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
+                                            </p>
+                                        </div>
+                                        <div><span class="btn-more"> <a href="/details/<%= event._id%>"
+                                                      class="ready-btn">xem thêm</a> </span></div>
+                                    </div>
+                                    <!-- Start single blog -->
+                                </div>
+                                <%}}%>
+                        </div>
+                        <%}%>
+                            <a href="/blog">
+                                <button type="button" class="btn btn-primary ready-btn mx-auto auto-center my-5">Xem thêm
+                                </button>
+                            </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
+    <div id="pricing" class="pricing-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <h2>Timeline</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="pri_table_list active"> <span class="saleon">Expired</span>
+                        <h3>Các hoạt động đã diễn ra</h3>
+                        <%if(!data.events){%>
+                            <h1>
+                                <%=err%>
+                            </h1>
+                            <%}else{for(event of data.events){  if(new Date(event.timeOpen).getTime()< Date.now()){%>
+                                <ol>
+                                    <li class="check">
+                                        <a href="/details/<%=event._id%>">
+                                            <%=event.title.length<50?event.title:event.title.substring(0,48) + "..."%>
+                                        </a><span class="event-time"><%=event.openString%></span></li>
+                                </ol>
+                                <%}}}%>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="pri_table_list active"> <span class="saleon comming">Comming</span>
+                        <h3>Các hoạt động sắp diễn ra</h3>
+                        <%if(!data.events){%>
+                            <h1>
+                                <%=err%>
+                            </h1>
+                            <%}else{  for(event of data.events){if(new Date(event.timeOpen).getTime()>Date.now()){%>
+                                <ol>
+                                    <li class="check">
+                                        <%=event.title.length<50?event.title:event.title.substring(0,48) + "..."%><span class="event-time"><%= event.openString%></span></li>
+                                </ol>
+                                <%}}}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our-skill-area start -->
+    <div class="our-skill-area fix hidden-sm">
+        <div class="test-overly"></div>
+        <div class="skill-bg area-padding-2">
+            <div class="container">
+                <!-- section-heading end -->
+                <div class="row">
+                    <div class="skill-text">
+                        <!-- single-skill start -->
+                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                            <div class="single-skill">
+                                <div class="progress-circular">
+                                    <div class="about-icon"><i class="far fa-calendar-alt" style="font-size: 48px;"></i>
+                                    </div>
+                                    <p class="text-center about-text">20+</p>
+                                    <h3 class="progress-h4">Hoạt động</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-skill end -->
+                        <!-- single-skill start -->
+                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                            <div class="single-skill">
+                                <div class="progress-circular">
+                                    <div class="about-icon"><i class="fas fa-users" style="font-size: 48px;"></i></div>
+                                    <p class="text-center about-text">6</p>
+                                    <h3 class="progress-h4">Đội hình</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-skill end -->
+                        <!-- single-skill start -->
+                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                            <div class="single-skill">
+                                <div class="progress-circular">
+                                    <div class="about-icon"><i class="fas fa-hamburger" style="font-size: 48px;"></i></div>
+                                    <p class="text-center about-text">100+</p>
+                                    <h3 class="progress-h4">Sản phẩm</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-skill end -->
+                        <!-- single-skill start -->
+                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                            <div class="single-skill">
+                                <div class="progress-circular">
+                                    <div class="about-icon"><i class="fas fa-male" style="font-size: 48px;"></i>
+                                    </div>
+                                    <p class="text-center about-text">500+</p>
+                                    <h3 class="progress-h4">Tình nguyện viên</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-skill end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our-skill-area end -->
+    <!-- Start reviews Area -->
+    <!-- <div class="reviews-area hidden-xs"><div class="work-us">  <div class="work-left-text"><a href="#">  <img src="img/about/2.jpg" alt=""></a>  </div>  <div class="work-right-text text-center"><h2>working with us</h2><h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5><a href="#contact" class="ready-btn">Liên hệ với chúng tôi ngay</a>  </div></div>  </div> -->
+    <!-- End reviews Area -->
+    <!-- Start portfolio Area -->
+    <div id="portfolio" class="portfolio-area area-padding fix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <h2>Sản phẩm</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <%if(!data.products){%>
+                    <h1>Khong co san pham nao duoc ban</h1>
+                    <%}else{ var types = data.types; var products = data.products%>
+                        <!-- Start Portfolio -page -->
+                        <div class="awesome-project-1 fix">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="awesome-menu ">
+                                    <ul class="project-menu">
+                                        <li> <a href="#" class="active" data-filter="*">All</a> </li>
+                                        <%for(type of types){%>
+                                            <li>
+                                                <a href="#" data-filter=".<%=type%>">
+                                                    <%=type%>
+                                                </a>
+                                            </li>
+                                            <%}%>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="awesome-project-content">
+                            <%for(product of products){ if(product.available===true){%>
+                                <!-- single-awesome-project start -->
+                                <div class="col-md-4 col-sm-4 col-xs-12 design <%=product.typename%>">
+                                    <div class="single-awesome-project">
+                                        <div class="awesome-img"> <a href="#"><img src="<%=product.image%>" alt="" /></a>
+                                            <div class="add-actions text-center">
+                                                <div class="project-dec">
+                                                    <h4>
+                                                        <%=product.name%>
+                                                    </h4>
+                                                    <span><%=product.price%></span>
+                                                    <br>
+                                                    <button class="btn btn-info round btn-buy rounded mb-2" type="button" id="<%=product._id%>">Mua</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single-awesome-project end -->
+                                <%}}%>
+                        </div>
+                        <%}%>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start contact Area -->
+    <div id="contact" class="contact-area">
+        <div class="contact-inner area-padding">
+            <div class="contact-overly"></div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h2>Thông tin liên hệ</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                </div>
+                <div class="row">
+
+                    <!-- Start Google Map -->
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <!-- Start Map -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31346.75632276864!2d106.8056019!3d10.8613777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1577467923113!5m2!1svi!2s"
+                            width="100%" height="480" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        <!-- End Map -->
+                    </div>
+                    <!-- End Google Map -->
+
+                    <!-- Start  contact -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <!-- Start contact icon column -->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-mobile"></i>
+                                    <p>
+                                        Điện thoại : 0971169771<br>
+                                        <span>Thứ hai – Thứ bảy (8am-8pm)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <p>
+                                        Email: quynhlymy979908@gmail.com<br>
+                                        <span>Web: Xuân Tình Nguyện 2020</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                    <p>
+                                        Địa chỉ: Trường Đại học CNTT TP.HCM<br>
+                                        <span>Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Left contact -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Area -->
+    <!-- Start Footer bottom Area -->
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <div class="footer-logo">
+                                    <h2><span>X</span>uân Tình Nguyện</h2>
+                                </div>
+                                <p>Xuân Tình Nguyện là chiến dịch thường niên của Trường Đại học Công nghệ Thông tin TP.HCM, với mong muốn mang lại một mùa xuân tràn ngập yêu thương đến người dân và các em học sinh có hoàn cảnh khó khăn tại địa bàn.</p>
+                                <div class="footer-icons">
+                                    <ul> </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>Thông tin</h4>
+                                <p> Mọi thông tin chi tiết xin liên hệ Fanpage Tuổi Trẻ UIT</p>
+                                <div class="footer-contacts">
+                                    <p><span>Điện thoại:</span> (08) 3603 0862</p>
+                                    <p><span>Email:</span> vpdoan@uit.edu.vn</p>
+                                    <p><span>Thời gian làm việc:</span> Thứ hai – Thứ bảy (8am-8pm)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>Hình Ảnh</h4>
+                                <div class="flicker-img">
+                                    <a href="#"><img class="small-picture" src="img/001.jpg" alt=""></a>
+                                    <a href="#"><img class="small-picture" src="img/002.jpg" alt=""></a>
+                                    <a href="#"><img class="small-picture" src="img/003.jpg" alt=""></a>
+                                    <a href="#"><img class="small-picture" src="img/004.jpg" alt=""></a>
+                                    <a href="#"><img class="small-picture" src="img/009.jpg" alt=""></a>
+                                    <a href="#"><img class="small-picture" src="img/006.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="copyright text-center">
+                            <p>Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> <strong>eBusiness</strong>. All Rights Reserved. </p>
+                        </div>
+                        <div class="credits">
+                            <!--All the links in the footer should remain intact.You can delete the links only if you purchased the pro version.Licensing information: https://bootstrapmade.com/license/Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness  -->Modified by <a href="https://webdevstudios.org/">Webdev Studios</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/knob/jquery.knob.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/parallax/parallax.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="lib/appear/jquery.appear.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

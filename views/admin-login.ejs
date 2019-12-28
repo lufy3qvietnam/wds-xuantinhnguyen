@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/admin-add.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type="text/css" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Đăng Nhập</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background: #fab1a0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        form {
+            border-radius: 10px;
+            background: #00b894;
+            color:white;
+        }
+    </style>
+</head>
+<body class="w-100 h-100">
+    <div class="container w-100 h-100">
+        <div class="row h-100">
+            <form action="/admin/" class="login-form p-4 m-auto mt-5" method ="post">
+                <%if(err && err.length>0){%>
+                    <h1 class="error-title"><%=err%></h1><%}%>
+                <div class="form-group">
+                    <label for="">Tên đăng nhập:</label>
+                    <input type="text" class="form-control" name="username" id="" aria-describedby="helpId" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Mật khẩu:</label>
+                    <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="" id="" value="">
+                        Lưu đăng nhâp
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

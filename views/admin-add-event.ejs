@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/admin-add.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type="text/css" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/nicEdit-latest.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        bkLib.onDomLoaded(function () {
+            nicEditors.allTextAreas()
+        });
+        //]]>
+    </script>
+    <script src="/js/main.js"></script>
+    <title>Quản lí bài viết</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="nav col-sm-10">
+                <img src="/img/wds-logo.png" class="admin-logo">
+                <a class="nav-link active" href="/admin">Quản lý hoạt động</a>
+                <a class="nav-link " href="/admin/products">Quản Lý Bán Hàng</a>
+                <a class="nav-link " href="/admin/teams">Quản Lý Đội Hình</a>
+            </nav>
+            <nav class="nav col-sm-2"><a class="nav-link admin-logout" href="/admin/logout">Đăng xuất</a></nav>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-center">Thêm Bài Viết</h1>
+       
+        <div class="row">
+            <form action="/admin/add-event" method="POST" class="container-fluid" enctype="multipart/form-data">
+                <div class="form-infor">
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <label for="title" class="col-sm-5 infor-label">Tiều đề bài viết</label>
+                            <div class="col-sm-7">
+                                <input required type="text" name="title" id="title" class="d-block input">
+                                <span class="infor-label">*Nhập tiêu đề bài viết</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <label for="title" class="col-sm-5 infor-label">Chọn ngày bắt đầu hoạt động</label>
+                            <div class="col-sm-7">
+                                <input required type="date" name="timeOpen" id="title" class="d-block input">
+                                <span class="infor-label">VD: 04/30/1975</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <label for="title" class="col-sm-5 infor-label">Mô tả sơ lược về hoạt động</label>
+                            <div class="col-sm-7">
+                                <input required type="text" name="shortDescription" id="title" class="d-block input">
+                                <span class="infor-label">*Viết mô tả sơ lược về hoạt động</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <label for="title" class="col-sm-5 infor-label">Ảnh tiêu đề </label>
+                            <div class="col-sm-7">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-preview fileupload-exists thumbnail"
+                                        style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                    <div>
+                                        <span class="btn btn-theme02 btn-file">
+                                            <input required type="file" class="default" name="postImage">
+                                        </span>
+                                    </div>
+                                    <span class="infor-label">*Chọn ảnh để hiện thị cho bài viết của bạn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <label for="title" class="col-sm-5 infor-label">Thông tin liên hệ</label>
+                            <div class="col-sm-7">
+                                <input required type="text" name="contacts" id="title" class="d-block input">
+                                <span class="infor-label">*Nhập email hoặc số điện thoại để mọi người có thể liên
+                                    lạc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-infor">
+                    <p class="infor-label text-center">Nội dung bài viết</p>
+                    <p class="infor-label text-left">Vào <a href="/admin/image">link này</a> để lấy link hình ảnh cho bài viết</p>
+                    <div class="form-group">
+                        <div class="row infor-group">
+                            <textarea name="description" style="width: 100%;" class="area">
+                                           Nội dung của bài viết
+                                     </textarea><br />
+                        </div>
+                    </div>
+                    <input type="submit" name="" id="" class="btn btn-success btn-submit" href="#" role="button"
+                        value="Đăng bài viết"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

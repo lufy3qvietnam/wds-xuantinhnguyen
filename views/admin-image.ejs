@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/admin-add.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type="text/css" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <title>Quản lí sản phẩm</title>
+</head>
+
+<body>
+        <div class="container-fluid">
+        <div class="row">
+            <nav class="nav col-sm-10">
+                <img src="/img/wds-logo.png" class="admin-logo">
+                <a class="nav-link " href="/admin">Quản lí hoạt động</a>
+                <a class="nav-link active " href="/admin/products">Quản lí Bán Hàng</a>
+                <a class="nav-link " href="/admin/teams">Quản lí Đội Hình</a>
+            </nav>
+            <nav class="nav col-sm-2"><a class="nav-link admin-logout" href="/admin/logout">Đăng xuất</a></nav>
+        </div>
+    </div>
+    <div class="container-fluid mt-5 px-4">
+        <h1 class="text-center">Quản lí hình ảnh</h1>
+        <div class="row">
+            <div class="mb-3 mt-5 col-sm-12 text-center bg-warning p-4">
+                <form action="/admin/post-image" enctype="multipart/form-data" method="POST">
+                    <p class="text-center">
+                        Upload hình ảnh mới
+                    </p>
+                    <input name = "postImage" type="file" class="file-upload" accept="image/png, image/jpeg">
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+                <p class="infor-label text-left">***Click vào hình ảnh để lấy link</p>
+            
+            <div class="image-wrap">
+                <%for(link of data){%>
+                <div class="col-sm-3 image-box">
+                    <img src="/img/post-image/<%=link%>" alt="hinh anh">
+                </div>
+                <%}%>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/admin-image.js"></script>
+
+</html>

@@ -1,0 +1,98 @@
+*{
+    padding:0;
+    margin:0;
+}
+.form-infor{
+    background: rgb(218, 214, 214);
+    padding:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.input{
+    width:80%;
+    border-radius: 10px;
+    border:none;
+    padding:6px 12px;
+    outline:none;
+
+}
+.infor-label{
+    font-size: 15px;
+    color: gray;
+    font-style: italic;
+}
+.infor-group{
+    padding-bottom:10px;
+    border-bottom: 1px solid rgb(124, 121, 121);
+    padding-top: 10px;
+}
+.area{
+    height: 500px;
+    display: block;
+}
+.btn-submit{
+    display: block;
+    margin:auto;
+}
+.input-description{
+    height: 200px;
+   
+}
+.nav{
+    padding:20px !important;
+    background-color: rgb(178, 142, 204);
+    color:white
+}
+.nav-link{
+    color:white !important;
+}
+.admin-logo{
+    text-align: center;
+    margin-right: 50px;
+    height: 40px;
+    width:200px;
+}
+.admin-logout{
+    background-color: rgb(238, 156, 156);
+    border-radius: 20px;
+    right:0;
+}
+.active {
+    border-bottom: 2px solid white;
+}
+
+.error-title{
+    font-style: italic;
+    font-size: 18px;
+    color:red;
+  } 
+
+.fileupload-preview img{
+    display:block;
+    margin-bottom: 20px;
+    height: 150px;
+}
+.done-bills{
+    background: gray;
+    opacity: 0.3;
+}
+.done-bills .done-bill{
+    visibility: hidden;
+    display: none;
+}
+
+.image-box{
+    padding:10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    height: 200px;
+}
+.image-box img{
+    width:100%;
+}
+.image-wrap{
+    width:100%;
+    justify-content: flex-start;
+}
