@@ -6,7 +6,7 @@
 
 /* Normal desktop :992px. */
 
-@media (min-width: 991px) and (max-width: 1169px) {
+@media (min-width: 992px) and (max-width: 1169px) {
   .slider-content {
     padding: 146px 0;
   }
@@ -17,17 +17,11 @@
     font-size: 18px;
     line-height: 28px;
   }
-  .nav navbar-nav navbar-right{
-    float: right;
-  }
 }
 
 /* Tablet desktop :768px. */
 
-@media (min-width: 768px) and (max-width: 1200px) {
-  .fas.fa-shopping-cart{
-    position: fixed;
-  }
+@media (min-width: 768px) and (max-width: 991px) {
   .main-menu ul.navbar-nav li {
     display: inline-block;
     padding: 0 8px;
@@ -125,12 +119,10 @@
 /* small mobile :320px. */
 
 @media (max-width: 767px) {
-  #navbar-example{
-    width:100% !important;
-  }
+
   .header-area {
     height: 60px !important;
-    background: rgb(238, 248, 91);
+    background: #000;
   }
   .navbar-header a.navbar-brand, .stick .navbar-header a.navbar-brand {
     display: inline-block;
@@ -141,13 +133,12 @@
     padding: 15px 0;
   }
   .nav.navbar-nav.navbar-right, .stick .nav.navbar-nav.navbar-right {
-    background-color: #201e20;
+    background-color: #252525;
     padding: 0;
     margin-top: 0;
   }
   .main-menu ul.navbar-nav li, .stick .main-menu ul.navbar-nav li {
     display: block;
-    text-align: center;
   }
   .main-menu ul.navbar-nav li a, .stick .main-menu ul.navbar-nav li a {
     padding: 10px 2px;
@@ -278,6 +269,10 @@
   li.threaded-comments {
     margin-left: 0;
   }
+  .post-information .entry-meta {
+    width: 90%;
+    height: 70px;
+  }
 }
 
 /* Large Mobile :480px. */
@@ -336,45 +331,8 @@
     height: 30px !important;
   }
 }
-@media (min-width: 736px){
+@media (min-width: 768px){
 .col-sm-4 {
     width: 32%;
-}
-
-}
-@media (max-width: 736px){
-  .count-number {
-    background: none;
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
-    font-size: 19px;
-    display: inline-block;
-    margin: 0 10px;
-  }
-  .count-text{
-    font-size: 19px !important;
-    padding: 0 !important
-
-  }
-  .stick .main-menu ul.navbar-nav li.active a{
-    color:white
-  }
-  .title1{
-  display: block;
-  }
-  .stick .main-menu ul.nav>li>a{
-    color: rgb(234, 224, 101);
-    line-height: 22px;
-    text-align: left;
-    padding: 24px 0px;
-    border-bottom: 1px solid white;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-  }
-}
-@media (max-width: 1920px) and (min-width: 1400px){
-.slider-content {
-    padding: 258px 0;
 }
 }
