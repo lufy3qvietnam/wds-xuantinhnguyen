@@ -344,7 +344,7 @@ li .fa-shopping-cart {
 }
 .main-menu ul.navbar-nav li.active a {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  color: #fff;
+  color: rgb(240, 106, 106);
   position: relative;
 }
 .main-menu ul.navbar-nav li a:hover {
@@ -447,7 +447,7 @@ li .fa-shopping-cart {
 }	
 .stick .main-menu ul.navbar-nav li.active a {	
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;	
-  color: #fff;	
+  color: rgb(240, 106, 106);
   position: relative;	
 }	
 .ready-btn.right-btn{	
