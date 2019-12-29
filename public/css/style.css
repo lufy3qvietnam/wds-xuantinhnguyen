@@ -28,6 +28,11 @@
   18.Blog CSS	
   17.Blog Details CSS	
 -----------------------------------------------------------------------------------*/	
+/* Load font */
+@font-face {
+  font-family: 'OngDo';
+  src: url('../font/OngDo.ttf') format('truetype');
+}
 /*----------------------------------------*/	
 /*  1.  Theme default CSS	
 /*----------------------------------------*/	
@@ -238,6 +243,7 @@ div#preloader {
 .img-logo {
   width: 60px;
   height: 60px;
+  display: inline-block !important;
 }
 .header-area {	
   position: absolute;	
@@ -328,7 +334,7 @@ li .fa-shopping-cart {
   transition: all 0s ease 0s !important;	
 }	
 .main-menu ul.navbar-nav li.active>a::after {	
-  border: 1px solid #fff;	
+  border: 1px solid #ef502e;	
   bottom: 0px;	
   content: "";	
   left: 0;	
@@ -337,18 +343,18 @@ li .fa-shopping-cart {
 }	
 .main-menu ul.navbar-nav li.active a:hover {	
   background: none;
-  color: #fff;
+  color: rgb(48, 56, 60);
 }
 .main-menu ul.navbar-nav li.active a:focus {
-  color: #fff;
+  color: rgb(60, 48, 48);
 }
 .main-menu ul.navbar-nav li.active a {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  color: #fff;
+  background: rgba(102, 255, 110, 0) none repeat scroll 0 0;
+  color: #ef502e;
   position: relative;
 }
 .main-menu ul.navbar-nav li a:hover {
-  color: #3EC1D5;
+  color: #ef502e;
 }
 .navbar {
   border: medium none;
@@ -406,7 +412,7 @@ li .fa-shopping-cart {
 /* 2.1. Stick menu
 /*--------------------------------*/
 .header-area.stick {
-  background-color: #F4EB6A;	
+  background-color: rgb(248, 231, 73);	
   height: fit-content;	
   position: fixed;	
   top: 0;	
@@ -447,7 +453,7 @@ li .fa-shopping-cart {
 }	
 .stick .main-menu ul.navbar-nav li.active a {	
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;	
-  color: #fff;	
+  color: #ef502e;	
   position: relative;	
 }	
 .ready-btn.right-btn{	
@@ -476,7 +482,7 @@ li .fa-shopping-cart {
   margin-top: 0px;	
 }	
 .stick .main-menu ul.nav>li>a {	
-  color: rgb(99, 98, 97);	
+  color: rgb(255, 104, 104);	
   line-height: 22px;	
   padding: 24px 0px;	
   text-transform: capitalize;	
@@ -1332,7 +1338,9 @@ li .fa-shopping-cart {
   color:rgb(238, 236, 232)	
 }	
 .title1 {	
-  font-size: 40px !important;	
+  font-size: 68px !important;	
+  font-family: OngDo;
+  font-weight: lighter !important;
 }	
 .count-text {	
   font-size: 30px !important;	
@@ -1629,15 +1637,13 @@ li .fa-shopping-cart {
   padding-bottom: 20px;
 }
 .footer-logo h2 {
-  color: #222;
-  padding: 0;
+  color: #ef502e;
+  padding: 40px 40px 0 40px;
   margin: 0;
   font-size: 36px;
-  font-weight: bold;
-  line-height: 1;
-}
-.footer-logo h2 span {
-  color: #3ec1d5;
+  font-weight: lighter;
+  /*line-height: 1;*/
+  font-family: OngDo;
 }
 .footer-icons ul li {
   display: inline-block;
