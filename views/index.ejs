@@ -441,51 +441,6 @@
         </div>
     </div>
     <!-- End Blog -->
-    <div id="pricing" class="pricing-area area-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h2>Timeline</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="pri_table_list active"> <span class="saleon">Expired</span>
-                        <h3>Các hoạt động đã diễn ra</h3>
-                        <%if(!data.events){%>
-                            <h1>
-                                <%=err%>
-                            </h1>
-                            <%}else{for(event of data.events){  if(new Date(event.timeOpen).getTime()< Date.now()){%>
-                                <ol>
-                                    <li class="check">
-                                        <a href="/details/<%=event._id%>">
-                                            <%=event.title.length<50?event.title:event.title.substring(0,48) + "..."%>
-                                        </a><span class="event-time"><%=event.openString%></span></li>
-                                </ol>
-                                <%}}}%>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="pri_table_list active"> <span class="saleon comming">Comming</span>
-                        <h3>Các hoạt động sắp diễn ra</h3>
-                        <%if(!data.events){%>
-                            <h1>
-                                <%=err%>
-                            </h1>
-                            <%}else{  for(event of data.events){if(new Date(event.timeOpen).getTime()>Date.now()){%>
-                                <ol>
-                                    <li class="check">
-                                        <%=event.title.length<50?event.title:event.title.substring(0,48) + "..."%><span class="event-time"><%= event.openString%></span></li>
-                                </ol>
-                                <%}}}%>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- our-skill-area start -->
     <div class="our-skill-area fix hidden-sm">
         <div class="test-overly"></div>
