@@ -1233,7 +1233,7 @@ li .fa-shopping-cart {
  12.Testimonial Area Css	
 ----------------------------------------*/	
 .testimonials-area {
-  background: rgba(0, 0, 0, 0) url("../img/background/slider1.jpg") no-repeat fixed center top / cover;
+  background: rgba(0, 0, 0, 0) no-repeat fixed center top / cover;
   height: auto;
   width: 100%;
 }

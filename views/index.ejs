@@ -19,7 +19,8 @@
     <link href="img/logo-xuan-tinh-nguyen.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
     <link href="/css/google-fonts.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C500%2C600%2C700%2C900&ver=1.0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C500%2C600%2C700%2C900&ver=1.0"
+        rel="stylesheet">
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Libraries CSS Files -->
@@ -49,9 +50,10 @@
                         <nav class="navbar navbar-default">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false"> <span
-                              class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                              class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target=".bs-example-navbar-collapse-1" aria-expanded="false"> <span
+                                        class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                        class="icon-bar"></span> <span class="icon-bar"></span> </button>
                                 <!-- Brand -->
                                 <a class="navbar-brand page-scroll sticky-logo">
                                     <!-- Uncomment below if you prefer to use an image logo -->
@@ -61,15 +63,16 @@
                                 </a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1"
+                                id="navbar-example">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="active"> <a class="page-scroll" href="#home">Trang chủ</a> </li>
                                     <li> <a class="page-scroll" href="#about">Giới thiệu</a> </li>
-                                    </li>
                                     <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down<span class="caret"></span></a><ul class="dropdown-menu" role="menu">  <li><a href=# >Drop Down 1</a></li>  <li><a href=# >Drop Down 2</a></li></ul>   </li> -->
                                     <li> <a class="page-scroll" href="/teams">Đội hình</a> </li>
                                     <li> <a class="page-scroll" href="#contact">Liên hệ</a> </li>
-                                    <li class="checkout"> <a class="page-scroll"><i class="fas fa-shopping-cart"></i></a>
+                                    <li class="checkout"> <a class="page-scroll"><i
+                                                class="fas fa-shopping-cart"></i></a>
                                         <div class="shop-panel">
                                             <ul class="shop-list">
                                                 <ul class="shop-item-add">
@@ -78,21 +81,23 @@
                                                         <span class="shop-item-num"> Số lượng</span>
                                                     </li>
                                                     <%var cart = data.cart ; if(!cart){%>
-                                                        <p class="text-center">Không có sản phẩm nào trong giỏ hàng</p>
-                                                        <%} else{%>
-                                                            <% for(item of cart){if(item){%>
-                                                                <li class="shop-item" item-id="<%=item.id%>" price="<%=item.price%>">
-                                                                    <div class="shop-remove-item" id="<%=item.id%>">
-                                                                        <i class="far fa-trash-alt"></i> Xóa sản phẩm
-                                                                    </div>
-                                                                    <span class="shop-item-name"><%=item.name%></span>
-                                                                    <span class="shop-item-num"><%=item.number%></span>
-                                                                </li>
-                                                                <%}}%>
-                                                                    <li class="shop-checkout">
-                                                                        <a class="shop-btn-checkout" data-toggle="modal" data-target="#confirmCheckout">Thanh Toán <i
-                                                class="fas fa-money-check"></i></a>
-                                                                    </li>
+                                                    <p class="text-center">Không có sản phẩm nào trong giỏ hàng</p>
+                                                    <%} else{%>
+                                                    <% for(item of cart){if(item){%>
+                                                    <li class="shop-item" item-id="<%=item.id%>"
+                                                        price="<%=item.price%>">
+                                                        <div class="shop-remove-item" id="<%=item.id%>">
+                                                            <i class="far fa-trash-alt"></i> Xóa sản phẩm
+                                                        </div>
+                                                        <span class="shop-item-name"><%=item.name%></span>
+                                                        <span class="shop-item-num"><%=item.number%></span>
+                                                    </li>
+                                                    <%}}%>
+                                                    <li class="shop-checkout">
+                                                        <a class="shop-btn-checkout" data-toggle="modal"
+                                                            data-target="#confirmCheckout">Thanh Toán <i
+                                                                class="fas fa-money-check"></i></a>
+                                                    </li>
                                                 </ul>
                                                 <%}%>
                                             </ul>
@@ -397,40 +402,45 @@
                     </div>
                 </div>
                 <% if(!data.events){%>
-                    <div class="row">
-                        <h2 class="text-center">
-                            <%=err%>
-                        </h2>
-                    </div>
-                    <%} else{events = data.events%>
-                        <div class="row card-deck">
-                            <!-- Start Left Blog -->
-                            <%for(i=events.length-1; i>events.length-4; i--){ event = events[i];
+                                                <div class="row">
+                                                    <h2 class="text-center">
+                                                        <%=err%>
+                                                    </h2>
+                                                </div>
+                                                <%} else{events = data.events%>
+                                                <div class="row card-deck">
+                                                    <!-- Start Left Blog -->
+                                                    <%for(i=events.length-1; i>events.length-4; i--){ event = events[i];
   if(event){%>
-                                <div class="col-md-4 col-sm-4 col-xs-12 card">
-                                    <div class="single-blog">
-                                        <div class="single-blog-img"> <a href="details/<%=event._id%>"> <img
-                                                      src="<%=event.image%>" alt=""> </a> </div>
-                                        <div class="blog-meta-1"> <span class="comments-type"> <i
-                                                      class="fa fa-user-o"></i> <a><%=event.author%></a>
-                                                </span> <span class="date-type"> <i class="fa fa-calendar"> </i>
-                                                   <%= event.openString%>
-                                                </span> </div>
-                                        <div class="blog-text">
-                                            <h4> <a href="details/<%=event._id%>"><%=event.title.length>65?event.title.substring(0,65)+"...":event.title%></a>
-                                            </h4>
-                                            <p>
-                                                <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
-                                            </p>
-                                        </div>
-                                        <div><span class="btn-more"> <a href="/details/<%= event._id%>"
-                                                      class="ready-btn">xem thêm</a> </span></div>
-                                    </div>
-                                    <!-- Start single blog -->
-                                </div>
-                                <%}}%>
-                        </div>
-                        <%}%>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 card">
+                                                        <div class="single-blog">
+                                                            <div class="single-blog-img"> <a
+                                                                    href="details/<%=event._id%>"> <img
+                                                                        src="<%=event.image%>" alt=""> </a> </div>
+                                                            <div class="blog-meta-1"> <span class="comments-type"> <i
+                                                                        class="fa fa-user-o"></i>
+                                                                    <a><%=event.author%></a>
+                                                                </span> <span class="date-type"> <i
+                                                                        class="fa fa-calendar"> </i>
+                                                                    <%= event.openString%>
+                                                                </span> </div>
+                                                            <div class="blog-text">
+                                                                <h4> <a
+                                                                        href="details/<%=event._id%>"><%=event.title.length>65?event.title.substring(0,65)+"...":event.title%></a>
+                                                                </h4>
+                                                                <p>
+                                                                    <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
+                                                                </p>
+                                                            </div>
+                                                            <div><span class="btn-more"> <a
+                                                                        href="/details/<%= event._id%>"
+                                                                        class="ready-btn">xem thêm</a> </span></div>
+                                                        </div>
+                                                        <!-- Start single blog -->
+                                                    </div>
+                                                    <%}}%>
+                                                </div>
+                                                <%}%>
                             <a href="/blog">
                                 <button type="button" class="btn btn-primary ready-btn mx-auto auto-center my-5">Xem thêm
                                 </button>
@@ -514,49 +524,56 @@
             </div>
             <div class="row">
                 <%if(!data.products){%>
-                    <h1>Khong co san pham nao duoc ban</h1>
-                    <%}else{ var types = data.types; var products = data.products%>
-                        <!-- Start Portfolio -page -->
-                        <div class="awesome-project-1 fix">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="awesome-menu ">
-                                    <ul class="project-menu">
-                                        <li> <a href="#" class="active" data-filter="*">All</a> </li>
-                                        <%for(type of types){%>
-                                            <li>
-                                                <a href="#" data-filter=".<%=type%>">
-                                                    <%=type%>
-                                                </a>
-                                            </li>
-                                            <%}%>
+                                                <h1>Khong co san pham nao duoc ban</h1>
+                                                <%}else{ var types = data.types; var products = data.products%>
+                                                <!-- Start Portfolio -page -->
+                                                <div class="awesome-project-1 fix">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="awesome-menu ">
+                                                            <ul class="project-menu">
+                                                                <li> <a href="#" class="active" data-filter="*">All</a>
+                                                                </li>
+                                                                <%for(type of types){%>
+                                                                <li>
+                                                                    <a href="#" data-filter=".<%=type%>">
+                                                                        <%=type%>
+                                                                    </a>
+                                                                </li>
+                                                                <%}%>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="awesome-project-content">
                             <%for(product of products){ if(product.available===true){%>
-                                <!-- single-awesome-project start -->
-                                <div class="col-md-4 col-sm-4 col-xs-12 design <%=product.typename%>">
-                                    <div class="single-awesome-project">
-                                        <div class="awesome-img"> <a href="#"><img src="<%=product.image%>" alt="" /></a>
-                                            <div class="add-actions text-center">
-                                                <div class="project-dec">
-                                                    <h4>
-                                                        <%=product.name%>
-                                                    </h4>
-                                                    <span><%=product.price%></span>
-                                                    <br>
-                                                    <button class="btn btn-info round btn-buy rounded mb-2" type="button" id="<%=product._id%>">Mua</button>
+                                                                <!-- single-awesome-project start -->
+                                                                <div
+                                                                    class="col-md-4 col-sm-4 col-xs-12 design <%=product.typename%>">
+                                                                    <div class="single-awesome-project">
+                                                                        <div class="awesome-img"> <a href="#"><img
+                                                                                    src="<%=product.image%>"
+                                                                                    alt="" /></a>
+                                                                            <div class="add-actions text-center">
+                                                                                <div class="project-dec">
+                                                                                    <h4>
+                                                                                        <%=product.name%>
+                                                                                    </h4>
+                                                                                    <span><%=product.price%></span>
+                                                                                    <br>
+                                                                                    <button
+                                                                                        class="btn btn-info round btn-buy rounded mb-2"
+                                                                                        type="button"
+                                                                                        id="<%=product._id%>">Mua</button>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-awesome-project end -->
-                                <%}}%>
-                        </div>
-                        <%}%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- single-awesome-project end -->
+                                                                <%}}%>
+                                                        </div>
+                                                        <%}%>
             </div>
         </div>
     </div>
