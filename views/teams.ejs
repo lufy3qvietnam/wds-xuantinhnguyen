@@ -120,8 +120,8 @@
                         <% if (teams) { %>
                             <%for(const each_team of teams){%>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="single-blog">
-                                        <div class="blog-img">
+                                    <div>
+                                        <div>
                                             <% if (each_team.image) {%>
                                                 <a href="/team-details/<%= each_team._id %>"><img src="<%= each_team.image %>" alt="Banner"></a>
                                                 <% } else { %>
@@ -129,10 +129,10 @@
                                                     <% } %>
                                         </div>
 
-                                        <div class="blog-text">
+                                        <div>
                                             <h4>
                                                 <a href="/team-details/<%= each_team._id %>" target="_blank">
-                                                    <span style="font-size: 27px;"><%= each_team.Name %></span>
+                                                    <span style="font-size: 35px; font-weight: bold; color: black;"><%= each_team.Name %></span>
                                                 </a>
                                             </h4>
                                             <p>
