@@ -349,8 +349,13 @@ li .fa-shopping-cart {
   color: rgb(60, 48, 48);
 }
 .main-menu ul.navbar-nav li.active a {
+<<<<<<< public/css/style.css
   background: rgba(102, 255, 110, 0) none repeat scroll 0 0;
   color: #ef502e;
+=======
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: rgb(240, 106, 106);
+>>>>>>> public/css/style.css
   position: relative;
 }
 .main-menu ul.navbar-nav li a:hover {
@@ -453,7 +458,11 @@ li .fa-shopping-cart {
 }	
 .stick .main-menu ul.navbar-nav li.active a {	
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;	
+<<<<<<< public/css/style.css
   color: #ef502e;	
+=======
+  color: rgb(240, 106, 106);
+>>>>>>> public/css/style.css
   position: relative;	
 }	
 .ready-btn.right-btn{	
