@@ -561,7 +561,7 @@ li .fa-shopping-cart {
   position: relative;	
 }	
 .our-skill-area {	
-  background: rgba(248, 248, 248, 0.8) url("../img/background/bg1.jpg") no-repeat fixed center top / cover;	
+  background: rgba(248, 248, 248, 0.8) url("../img/slider/background.png") no-repeat fixed center top / cover;	
 }	
 .test-overly {	
   background: rgba(0, 0, 0, 0.80);	
@@ -2558,8 +2558,9 @@ span.email-notes {
   padding-top: 30px;
 }
 .small-picture{	
-  width:150px;	
+  width:120px;	
   height: 80px;	
+  padding: 2px 5px;
 }	
 .about-icon{	
   font-size: 100px;	
