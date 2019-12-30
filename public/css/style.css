@@ -412,8 +412,8 @@ li .fa-shopping-cart {
 /* 2.1. Stick menu
 /*--------------------------------*/
 .header-area.stick {
-  background-color: rgb(248, 231, 73);	
-  height: fit-content;	
+  background-color: #F4EB6A;	
+  height: 70px;	
   position: fixed;	
   top: 0;	
   width: 100%;	
@@ -482,7 +482,7 @@ li .fa-shopping-cart {
   margin-top: 0px;	
 }	
 .stick .main-menu ul.nav>li>a {	
-  color: rgb(255, 104, 104);	
+  color: rgb(99,98,97);	
   line-height: 22px;	
   padding: 24px 0px;	
   text-transform: capitalize;	
@@ -1669,7 +1669,7 @@ li .fa-shopping-cart {
   margin-top: 30px;
 }
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #ef502e;
   font-weight: 700;
 }
 .popular-tag ul li {
@@ -1718,7 +1718,7 @@ li .fa-shopping-cart {
 }
 .copyright a,
 .credits a {
-  color: #3EC1D5;
+  color: #ef502e;
 }
 .credits {
   padding-top: 5px;
@@ -1838,7 +1838,7 @@ li .fa-shopping-cart {
   padding: 15px 10px;
 }
 .recent-post-striped .recent-single-post:nth-of-type(even){
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #F4EB6A;
 }
 .ready-btn {
   border: 1px solid #fff;
@@ -1923,7 +1923,7 @@ li .fa-shopping-cart {
 .title2 {
   font-family: 'Nunito', sans-serif; 
   font-weight: 700;
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 .blog-title{
   font-family: 'Nunito', sans-serif; 
@@ -2058,15 +2058,6 @@ flex: 1;
 #st-7 .st-btn[data-network='facebook'] > span {
   color: #fff;
 }
-#st-7 .st-btn[data-network='messenger'] {
-  background-color: #448AFF;
-}
-#st-7 .st-btn[data-network='messenger'] svg {
-  fill: #fff;
-}
-#st-7 .st-btn[data-network='messenger'] > span {
-  color: #fff;
-}
 #st-7 .st-btn[data-network='sharethis'] {
   background-color: #95D03A;
 }
@@ -2126,8 +2117,9 @@ flex: 1;
 .carddt-header {
   padding: 1.5rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #F4EB6A;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: rgb(99,98,97);
 }
 .carddt-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -2279,7 +2271,7 @@ flex: 1;
 }
 .post-information h2 {
   color: #363636;
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .post-information {
