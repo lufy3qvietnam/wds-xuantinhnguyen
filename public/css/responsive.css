@@ -17,6 +17,9 @@
     font-size: 18px;
     line-height: 28px;
   }
+  .post-header h2 {
+    padding-top: 10px;
+  }
 }
 
 /* Tablet desktop :768px. */
@@ -157,7 +160,10 @@
   .logo a {
     padding: 0;
   }
-
+  .img-logo {
+    width: 40px;
+    height: 40px;
+  }
   .slider-area {
     margin-top: 60px;
   }

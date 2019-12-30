@@ -28,6 +28,11 @@
   18.Blog CSS	
   17.Blog Details CSS	
 -----------------------------------------------------------------------------------*/	
+/* Load font */
+@font-face {
+  font-family: 'OngDo';
+  src: url('../font/OngDo.ttf') format('truetype');
+}
 /*----------------------------------------*/	
 /*  1.  Theme default CSS	
 /*----------------------------------------*/	
@@ -186,11 +191,11 @@ div#preloader {
   background: #fff url('../img/preloader.gif') no-repeat center center;
 }
 ::-moz-selection {
-  background: #3EC1D5;
+  background: #ff876d;
   text-shadow: none;
 }
 ::selection {
-  background: #3EC1D5;
+  background: #ff876d;
   text-shadow: none;
 }
 .area-padding {
@@ -238,6 +243,7 @@ div#preloader {
 .img-logo {
   width: 60px;
   height: 60px;
+  display: inline-block !important;
 }
 .header-area {	
   position: absolute;	
@@ -328,7 +334,7 @@ li .fa-shopping-cart {
   transition: all 0s ease 0s !important;	
 }	
 .main-menu ul.navbar-nav li.active>a::after {	
-  border: 1px solid #fff;	
+  border: 1px solid #ef502e;	
   bottom: 0px;	
   content: "";	
   left: 0;	
@@ -337,18 +343,23 @@ li .fa-shopping-cart {
 }	
 .main-menu ul.navbar-nav li.active a:hover {	
   background: none;
-  color: #fff;
+  color: rgb(48, 56, 60);
 }
 .main-menu ul.navbar-nav li.active a:focus {
-  color: #fff;
+  color: rgb(60, 48, 48);
 }
 .main-menu ul.navbar-nav li.active a {
+<<<<<<< public/css/style.css
+  background: rgba(102, 255, 110, 0) none repeat scroll 0 0;
+  color: #ef502e;
+=======
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   color: rgb(240, 106, 106);
+>>>>>>> public/css/style.css
   position: relative;
 }
 .main-menu ul.navbar-nav li a:hover {
-  color: #3EC1D5;
+  color: #ef502e;
 }
 .navbar {
   border: medium none;
@@ -407,7 +418,7 @@ li .fa-shopping-cart {
 /*--------------------------------*/
 .header-area.stick {
   background-color: #F4EB6A;	
-  height: fit-content;	
+  height: 70px;	
   position: fixed;	
   top: 0;	
   width: 100%;	
@@ -447,7 +458,11 @@ li .fa-shopping-cart {
 }	
 .stick .main-menu ul.navbar-nav li.active a {	
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;	
+<<<<<<< public/css/style.css
+  color: #ef502e;	
+=======
   color: rgb(240, 106, 106);
+>>>>>>> public/css/style.css
   position: relative;	
 }	
 .ready-btn.right-btn{	
@@ -476,7 +491,7 @@ li .fa-shopping-cart {
   margin-top: 0px;	
 }	
 .stick .main-menu ul.nav>li>a {	
-  color: rgb(99, 98, 97);	
+  color: rgb(99,98,97);	
   line-height: 22px;	
   padding: 24px 0px;	
   text-transform: capitalize;	
@@ -1227,7 +1242,7 @@ li .fa-shopping-cart {
  12.Testimonial Area Css	
 ----------------------------------------*/	
 .testimonials-area {
-  background: rgba(0, 0, 0, 0) url("../img/background/slider1.jpg") no-repeat fixed center top / cover;
+  background: rgba(0, 0, 0, 0) no-repeat fixed center top / cover;
   height: auto;
   width: 100%;
 }
@@ -1332,7 +1347,9 @@ li .fa-shopping-cart {
   color:rgb(238, 236, 232)	
 }	
 .title1 {	
-  font-size: 40px !important;	
+  font-size: 68px !important;	
+  font-family: OngDo;
+  font-weight: lighter !important;
 }	
 .count-text {	
   font-size: 30px !important;	
@@ -1375,12 +1392,21 @@ li .fa-shopping-cart {
   padding-bottom: 5px;	
 }	
 .blog-text h4 a {	
-  color: #444;	
-  text-decoration: none;	
+  color: #444;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+
+}
+.blog-text p {
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
 }
 .blog-text h4 {
   color: #444;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 .blog-btn {
   border-bottom: 1px dotted #444;
@@ -1429,6 +1455,10 @@ li .fa-shopping-cart {
   border-bottom: 1px dotted #fff;
   padding: 10px 0;
 }
+.blog-meta-1 {
+  border-bottom: 1px dotted #fff;
+  padding: 10px 0;
+}
 .comments-type>a,
 .date-type,
 .blog-meta span.comments-type {
@@ -1468,6 +1498,10 @@ li .fa-shopping-cart {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.post-header h2 {
+  color: #ef502e;
+  line-height: initial;
 }
 /*------------------------------
   13. Quote area
@@ -1629,15 +1663,13 @@ li .fa-shopping-cart {
   padding-bottom: 20px;
 }
 .footer-logo h2 {
-  color: #222;
-  padding: 0;
+  color: #ef502e;
+  padding: 40px 40px 0 40px;
   margin: 0;
   font-size: 36px;
-  font-weight: bold;
-  line-height: 1;
-}
-.footer-logo h2 span {
-  color: #3ec1d5;
+  font-weight: lighter;
+  /*line-height: 1;*/
+  font-family: OngDo;
 }
 .footer-icons ul li {
   display: inline-block;
@@ -1663,7 +1695,7 @@ li .fa-shopping-cart {
   margin-top: 30px;
 }
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #ef502e;
   font-weight: 700;
 }
 .popular-tag ul li {
@@ -1673,8 +1705,7 @@ li .fa-shopping-cart {
   display: block;
   overflow: hidden;
 }
-.popular-tag ul li a:hover,
-.footer-icons ul li a:hover {
+.popular-tag ul li a:hover {
   background: #3EC1D5;
   border: 1px solid #3EC1D5;
   color: #fff;
@@ -1701,7 +1732,7 @@ li .fa-shopping-cart {
 }
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #fd797b;
 }
 .copyright-text a {
   color: #444;
@@ -1712,7 +1743,7 @@ li .fa-shopping-cart {
 }
 .copyright a,
 .credits a {
-  color: #3EC1D5;
+  color: #ef502e;
 }
 .credits {
   padding-top: 5px;
@@ -1832,7 +1863,7 @@ li .fa-shopping-cart {
   padding: 15px 10px;
 }
 .recent-post-striped .recent-single-post:nth-of-type(even){
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #F4EB6A;
 }
 .ready-btn {
   border: 1px solid #fff;
@@ -1917,12 +1948,13 @@ li .fa-shopping-cart {
 .title2 {
   font-family: 'Nunito', sans-serif; 
   font-weight: 700;
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 .blog-title{
   font-family: 'Nunito', sans-serif; 
   font-weight: 700;
   font-size: 48px;
+  padding-top: 60px;
 }
 /*----------------------------------------*/
 /*  19.	Blog Details css
@@ -2052,15 +2084,6 @@ flex: 1;
 #st-7 .st-btn[data-network='facebook'] > span {
   color: #fff;
 }
-#st-7 .st-btn[data-network='messenger'] {
-  background-color: #448AFF;
-}
-#st-7 .st-btn[data-network='messenger'] svg {
-  fill: #fff;
-}
-#st-7 .st-btn[data-network='messenger'] > span {
-  color: #fff;
-}
 #st-7 .st-btn[data-network='sharethis'] {
   background-color: #95D03A;
 }
@@ -2120,8 +2143,9 @@ flex: 1;
 .carddt-header {
   padding: 1.5rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #F4EB6A;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: rgb(99,98,97);
 }
 .carddt-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -2273,7 +2297,7 @@ flex: 1;
 }
 .post-information h2 {
   color: #363636;
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .post-information {
@@ -2314,8 +2338,8 @@ flex: 1;
 .pagination>.active>span:hover,
 .pagination>.active>a:focus,
 .pagination>.active>span:focus {
-  background-color: #3EC1D5;
-  border-color: #3EC1D5;
+  background-color: #ef502e;
+  border-color: #ef502e;
   color: #fff;
   cursor: default;
   z-index: 3;
@@ -2389,6 +2413,10 @@ flex: 1;
 .single-blog .btn-more {
   position: absolute;
   bottom: 10px;
+  left: 35%;
+}
+#btn-more-big{
+  background-color: #ef502e;
 }
 .author-info {
   background: #fff none repeat scroll 0 0;
