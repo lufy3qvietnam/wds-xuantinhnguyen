@@ -27,11 +27,13 @@ module.exports.addToMarket = async function (req, res, next) {
 module.exports.removeFromCart = async function (req, res, next) {
   var cart = req.session.cart;
   var id = req.body.id;
+  console.log(id)
   for(i=0; i<cart.length;i++){
     if(cart[i]==id){
-      cart = cart.slice(i-1,i+1);
+      cart = [...cart.slice(0,i),...cart.slice(i+1,cart.length)];
     }
   }
+  console.log(cart)
   req.session.cart = await cart;
   res.status(200).json({
     success: true,

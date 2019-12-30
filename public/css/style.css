@@ -217,6 +217,7 @@ div#preloader {
   margin-bottom: 70px;
   position: relative;
   text-transform: capitalize;
+  margin-top: 70px;
 }
 .section-headline h2::after {
   border: 1px solid #333;
@@ -241,7 +242,6 @@ div#preloader {
 /*  2. Header top Area
 /*--------------------------------*/
 .img-logo {
-  width: 60px;
   height: 60px;
   display: inline-block !important;
 }
@@ -349,8 +349,8 @@ li .fa-shopping-cart {
   color: rgb(60, 48, 48);
 }
 .main-menu ul.navbar-nav li.active a {
-  background: rgba(102, 255, 110, 0) none repeat scroll 0 0;
-  color: #ef502e;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: rgb(240, 106, 106);
   position: relative;
 }
 .main-menu ul.navbar-nav li a:hover {
@@ -453,7 +453,7 @@ li .fa-shopping-cart {
 }	
 .stick .main-menu ul.navbar-nav li.active a {	
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;	
-  color: #ef502e;	
+  color: rgb(240, 106, 106);
   position: relative;	
 }	
 .ready-btn.right-btn{	
@@ -1744,11 +1744,11 @@ li .fa-shopping-cart {
 /*  16.Home Page 2  CSS
 /*----------------------------------------*/
 .header-bg {
-  background: url(../img/slider/slider1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-attachment: fixed;
+  background: url(../img/slider/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -160px;
+    background-attachment: fixed;
 }
 .header-bg.home-2 {
   width: 100%;
@@ -1874,7 +1874,6 @@ li .fa-shopping-cart {
 .ready-btn:hover {
   color: #fff;
   background: #3EC1D5;
-  border: 1px solid #3EC1D5;
   text-decoration: none;
 }
 .post-img {
@@ -2408,7 +2407,15 @@ flex: 1;
   left: 35%;
 }
 #btn-more-big{
-  background-color: #ef502e;
+  border-bottom: 2px solid #ef502e;
+  border-radius: 0;
+  background: none;
+  color: black;
+  text-align: left;
+  outline: none;
+}
+#btn-more-big:hover{
+  color: #3ec1d5;
 }
 .author-info {
   background: #fff none repeat scroll 0 0;
@@ -2622,7 +2629,7 @@ span.email-notes {
 .slider-area{	
   height: 800px;	
   overflow: hidden;	
-}	
+}
 /* handle loi */	
 /*----------------------------------------	
  .End CSS	
