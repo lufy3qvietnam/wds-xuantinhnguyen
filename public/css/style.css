@@ -191,11 +191,11 @@ div#preloader {
   background: #fff url('../img/preloader.gif') no-repeat center center;
 }
 ::-moz-selection {
-  background: #3EC1D5;
+  background: #ff876d;
   text-shadow: none;
 }
 ::selection {
-  background: #3EC1D5;
+  background: #ff876d;
   text-shadow: none;
 }
 .area-padding {
@@ -1490,6 +1490,10 @@ li .fa-shopping-cart {
   left: 50%;
   transform: translateX(-50%);
 }
+.post-header h2 {
+  color: #ef502e;
+  line-height: initial;
+}
 /*------------------------------
   13. Quote area
 --------------------------------*/
@@ -1692,8 +1696,7 @@ li .fa-shopping-cart {
   display: block;
   overflow: hidden;
 }
-.popular-tag ul li a:hover,
-.footer-icons ul li a:hover {
+.popular-tag ul li a:hover {
   background: #3EC1D5;
   border: 1px solid #3EC1D5;
   color: #fff;
@@ -1720,7 +1723,7 @@ li .fa-shopping-cart {
 }
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #fd797b;
 }
 .copyright-text a {
   color: #444;
@@ -1942,6 +1945,7 @@ li .fa-shopping-cart {
   font-family: 'Nunito', sans-serif; 
   font-weight: 700;
   font-size: 48px;
+  padding-top: 60px;
 }
 /*----------------------------------------*/
 /*  19.	Blog Details css
@@ -2325,8 +2329,8 @@ flex: 1;
 .pagination>.active>span:hover,
 .pagination>.active>a:focus,
 .pagination>.active>span:focus {
-  background-color: #3EC1D5;
-  border-color: #3EC1D5;
+  background-color: #ef502e;
+  border-color: #ef502e;
   color: #fff;
   cursor: default;
   z-index: 3;
