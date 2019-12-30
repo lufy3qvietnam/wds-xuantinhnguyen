@@ -33,6 +33,10 @@
   font-family: 'OngDo';
   src: url('../font/OngDo.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'OngDo2';
+  src: url('../font/OngDo2.ttf') format('truetype');
+}
 /*----------------------------------------*/	
 /*  1.  Theme default CSS	
 /*----------------------------------------*/	
@@ -1342,6 +1346,11 @@ li .fa-shopping-cart {
   font-family: OngDo;
   font-weight: lighter !important;
 }	
+.title1 span {
+  font-family: OngDo2;
+  font-size: 86px;
+  font-weight: lighter !important;
+}
 .count-text {	
   font-size: 30px !important;	
   padding-top: 45px;	
@@ -1663,12 +1672,16 @@ li .fa-shopping-cart {
 }
 .footer-logo h2 {
   color: #ef502e;
-  padding: 40px 40px 0 40px;
+  padding: 40px 40px 0 15px;
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: lighter;
   /*line-height: 1;*/
   font-family: OngDo;
+}
+.footer-logo h2 span {
+  font-family: OngDo2;
+  font-size: 42px;
 }
 .footer-icons ul li {
   display: inline-block;
