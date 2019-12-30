@@ -426,7 +426,7 @@
                                                                 </span> </div>
                                                             <div class="blog-text">
                                                                 <h4> <a
-                                                                        href="details/<%=event._id%>"><%=event.title.length>65?event.title.substring(0,65)+"...":event.title%></a>
+                                                                        href="details/<%=event._id%>"><%=event.title.length>65?(event.title.substring(0,65)+"...").toUpperCase():event.title.toUpperCase()%></a>
                                                                 </h4>
                                                                 <p>
                                                                     <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
@@ -442,7 +442,7 @@
                                                 </div>
                                                 <%}%>
                             <a href="/blog">
-                                <button type="button" class="btn btn-primary ready-btn mx-auto auto-center my-5">Xem thêm
+                                <button type="button" id="btn-more-big" class="btn btn-primary ready-btn mx-auto auto-center my-5">Xem thêm
                                 </button>
                             </a>
             </div>

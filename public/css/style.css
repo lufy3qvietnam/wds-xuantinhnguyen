@@ -1383,12 +1383,21 @@ li .fa-shopping-cart {
   padding-bottom: 5px;	
 }	
 .blog-text h4 a {	
-  color: #444;	
-  text-decoration: none;	
+  color: #444;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+
+}
+.blog-text p {
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
 }
 .blog-text h4 {
   color: #444;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 .blog-btn {
   border-bottom: 1px dotted #444;
@@ -1434,6 +1443,10 @@ li .fa-shopping-cart {
   border-bottom: 1px dotted #333;
 }
 .blog-meta {
+  border-bottom: 1px dotted #fff;
+  padding: 10px 0;
+}
+.blog-meta-1 {
   border-bottom: 1px dotted #fff;
   padding: 10px 0;
 }
@@ -2387,6 +2400,10 @@ flex: 1;
 .single-blog .btn-more {
   position: absolute;
   bottom: 10px;
+  left: 35%;
+}
+#btn-more-big{
+  background-color: #ef502e;
 }
 .author-info {
   background: #fff none repeat scroll 0 0;
