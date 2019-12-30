@@ -1697,8 +1697,8 @@ li .fa-shopping-cart {
   overflow: hidden;
 }
 .popular-tag ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #ef502e;
+  border: 1px solid #ef502e;
   color: #fff;
 }
 .popular-tag ul li a {
@@ -1889,7 +1889,7 @@ li .fa-shopping-cart {
 }
 .pst-content p a:hover,
 .left-blog ul li a:hover {
-  color: #3EC1D5;
+  color: #ef502e;
 }
 .blog-page .single-blog {
   /*margin-bottom: 40px;*/
