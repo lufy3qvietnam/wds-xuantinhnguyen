@@ -249,11 +249,13 @@
                             </a>
                             <p>Xuân Tình Nguyện là chiến dịch thường niên của Trường Đại học Công nghệ Thông tin TP.HCM, với mong muốn mang lại một mùa xuân tràn ngập yêu thương đến người dân và các em học sinh có hoàn cảnh khó khăn tại địa bàn. </p>
                             <ul>
-                                <li> <i class="fa fa-check"></i> Interior design Package </li>
-                                <li> <i class="fa fa-check"></i> Building House </li>
-                                <li> <i class="fa fa-check"></i> Reparing of Residentail Roof </li>
-                                <li> <i class="fa fa-check"></i> Renovaion of Commercial Office </li>
-                                <li> <i class="fa fa-check"></i> Make Quality Products </li>
+                                <li> <i class="fa fa-check"></i> Đội hình bánh mứt</li>
+                                <li> <i class="fa fa-check"></i> Đội hình sự kiện </li>
+                                <li> <i class="fa fa-check"></i> Đội hình truyền thông</li>
+                                <li> <i class="fa fa-check"></i> Đội hình Handmade</li>
+                                <li> <i class="fa fa-check"></i> Đội hình Chợ Mới - An Giang</li>
+                                <li> <i class="fa fa-check"></i> Đội hình Vì Đàn Em</li>
+                                <li> <i class="fa fa-check"></i> Đội hình Máy tính cũ - tri thức mới</li>
                             </ul>
                         </div>
                     </div>
@@ -397,7 +399,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2>Hoạt động gần đây</h2>
+                            <h2>Hoạt động</h2>
                         </div>
                     </div>
                 </div>
@@ -535,9 +537,15 @@
                                                                 </li>
                                                                 <%for(type of types){%>
                                                                 <li>
-                                                                    <a href="#" data-filter=".<%=type%>">
-                                                                        <%=type%>
-                                                                    </a>
+                                                                    <% if (type=="drink"){%>
+                                                                        <a href="#" data-filter=".<%=type%>">Thức uống</a>
+                                                                    <%} else if (type=="food"){%>
+                                                                        <a href="#" data-filter=".<%=type%>">Đồ ăn</a>
+                                                                    <%} else if (type=="souvenir"){%>
+                                                                        <a href="#" data-filter=".<%=type%>">Quà lưu niệm</a>
+                                                                    <%} else{%>
+                                                                        <a href="#" data-filter=".<%=type%>"><%=type%></a>
+                                                                    <%}%>
                                                                 </li>
                                                                 <%}%>
                                     </ul>
@@ -558,8 +566,8 @@
                                                                                     <h4>
                                                                                         <%=product.name%>
                                                                                     </h4>
-                                                                                    <span><%=product.price%></span>
-                                                                                    <br>
+                                                                                    <span><%=product.price%>₫</span>
+                                                                                    <br><br>
                                                                                     <button
                                                                                         class="btn btn-info round btn-buy rounded mb-2"
                                                                                         type="button"

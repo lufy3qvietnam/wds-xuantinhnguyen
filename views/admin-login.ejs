@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,25 +20,28 @@
             width: 100%;
             height: 100%;
         }
+
         body {
             background: #fab1a0;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
         form {
             border-radius: 10px;
             background: #00b894;
-            color:white;
+            color: white;
         }
     </style>
 </head>
+
 <body class="w-100 h-100">
     <div class="container w-100 h-100">
         <div class="row h-100">
-            <form action="/admin/" class="login-form p-4 m-auto mt-5" method ="post">
+            <form action="/admin/" class="login-form p-4 m-auto mt-5" method="post">
                 <%if(err && err.length>0){%>
-                    <h1 class="error-title"><%=err%></h1><%}%>
+                <h1 class="error-title"><%=err%></h1><%}%>
                 <div class="form-group">
                     <label for="">Tên đăng nhập:</label>
                     <input type="text" class="form-control" name="username" id="" aria-describedby="helpId" placeholder="">
@@ -52,7 +56,9 @@
                         Lưu đăng nhâp
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                </div>
             </form>
         </div>
     </div>

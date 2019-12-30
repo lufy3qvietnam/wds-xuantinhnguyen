@@ -1371,6 +1371,14 @@ li .fa-shopping-cart {
   border-radius: 50%;	
   height: 100%;	
 }	
+.btn-info {
+  background-color: #ef502e;
+  border-color: #ef502e;
+}
+.btn-info:hover{
+  background-color: #fd797b;
+  border-color: #fd797b;
+}
 /*--------------------------------*/	
 /*  13.Blog Area	
 /*--------------------------------*/	
