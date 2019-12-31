@@ -568,7 +568,7 @@ li .fa-shopping-cart {
   position: relative;	
 }	
 .our-skill-area {	
-  background: rgba(248, 248, 248, 0.8) url("../img/slider/background.png") no-repeat fixed center top / cover;	
+  background: rgba(248, 248, 248, 0.8) url('../img/slider/background.png') no-repeat fixed center top / cover;	
 }	
 .test-overly {	
   background: rgba(0, 0, 0, 0.80);	
@@ -902,6 +902,9 @@ li .fa-shopping-cart {
   width: 100%;	
   opacity: 0;	
 }	
+.team-img img{
+  height: 300px;
+}
 .team-social-icon {	
   left: 50%;	
   margin-left: -61px;	
@@ -1240,7 +1243,7 @@ li .fa-shopping-cart {
  12.Testimonial Area Css	
 ----------------------------------------*/	
 .testimonials-area {
-  background: rgba(0, 0, 0, 0) no-repeat fixed center top / cover;
+  background: rgba(0, 0, 0, 0) url("../img/slider/background.png") no-repeat fixed center top / cover;
   height: auto;
   width: 100%;
 }
