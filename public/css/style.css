@@ -2440,6 +2440,7 @@ flex: 1;
   color: black;
   text-align: left;
   outline: none;
+  padding-bottom: 2px;
 }
 #btn-more-big:hover{
   color: #ef502e;

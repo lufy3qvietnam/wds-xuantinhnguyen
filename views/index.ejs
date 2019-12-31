@@ -391,66 +391,6 @@
             </div>
         </div>
     </div>
-    <!-- Start Blog Area -->
-    <div id="blog" class="blog-area">
-        <div class="blog-inner area-padding">
-            <div class="blog-overly"></div>
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-headline text-center">
-                            <h2>Hoạt động</h2>
-                        </div>
-                    </div>
-                </div>
-                <% if(!data.events){%>
-                                                <div class="row">
-                                                    <h2 class="text-center">
-                                                        <%=err%>
-                                                    </h2>
-                                                </div>
-                                                <%} else{events = data.events%>
-                                                <div class="row card-deck">
-                                                    <!-- Start Left Blog -->
-                                                    <%for(i=events.length-1; i>events.length-4; i--){ event = events[i];
-  if(event){%>
-                                                    <div class="col-md-4 col-sm-4 col-xs-12 card">
-                                                        <div class="single-blog">
-                                                            <div class="single-blog-img"> <a
-                                                                    href="details/<%=event._id%>"> <img
-                                                                        src="<%=event.image%>" alt=""> </a> </div>
-                                                            <div class="blog-meta-1 text-center"> <!--<span class="comments-type"> <i
-                                                                        class="fa fa-user-o"></i>
-                                                                    <a><%=event.author%></a>
-                                                                </span>--> <span class="date-type"> <i
-                                                                        class="fa fa-calendar"> </i>
-                                                                    <%= event.openString%>
-                                                                </span> </div>
-                                                            <div class="blog-text">
-                                                                <h4> <a
-                                                                        href="details/<%=event._id%>"><%=event.title.length>65?(event.title.substring(0,65)+"...").toUpperCase():event.title.toUpperCase()%></a>
-                                                                </h4>
-                                                                <p>
-                                                                    <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
-                                                                </p>
-                                                            </div>
-                                                            <div><span class="btn-more"> <a
-                                                                        href="/details/<%= event._id%>"
-                                                                        class="ready-btn">xem thêm</a> </span></div>
-                                                        </div>
-                                                        <!-- Start single blog -->
-                                                    </div>
-                                                    <%}}%>
-                                                </div>
-                                                <%}%>
-                            <a href="/blog">
-                                <button type="button" id="btn-more-big" class="ready-btn mx-auto auto-center my-5">Xem thêm <i class="fas fa-angle-right"></i>
-                                </button>
-                            </a>
-            </div>
-        </div>
-    </div>
-    <!-- End Blog -->
     <!-- our-skill-area start -->
     <div class="our-skill-area fix hidden-sm">
         <div class="test-overly"></div>
@@ -511,6 +451,67 @@
         </div>
     </div>
     <!-- our-skill-area end -->
+    <!-- Start Blog Area -->
+    <div id="blog" class="blog-area">
+        <div class="blog-inner area-padding">
+            <div class="blog-overly"></div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h2>Hoạt động</h2>
+                        </div>
+                    </div>
+                </div>
+                <% if(!data.events){%>
+                                                <div class="row">
+                                                    <h2 class="text-center">
+                                                        <%=err%>
+                                                    </h2>
+                                                </div>
+                                                <%} else{events = data.events%>
+                                                <div class="row card-deck">
+                                                    <!-- Start Left Blog -->
+                                                    <%for(i=events.length-1; i>events.length-4; i--){ event = events[i];
+  if(event){%>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 card">
+                                                        <div class="single-blog">
+                                                            <div class="single-blog-img"> <a
+                                                                    href="details/<%=event._id%>"> <img
+                                                                        src="<%=event.image%>" alt=""> </a> </div>
+                                                            <div class="blog-meta-1 text-center">
+                                                                <!--<span class="comments-type"> <i
+                                                                        class="fa fa-user-o"></i>
+                                                                    <a><%=event.author%></a>
+                                                                </span>--> <span class="date-type"> <i
+                                                                        class="fa fa-calendar"> </i>
+                                                                    <%= event.openString%>
+                                                                </span> </div>
+                                                            <div class="blog-text">
+                                                                <h4> <a
+                                                                        href="details/<%=event._id%>"><%=event.title.length>65?(event.title.substring(0,65)+"...").toUpperCase():event.title.toUpperCase()%></a>
+                                                                </h4>
+                                                                <p>
+                                                                    <%=event.shortDescription.length>90?event.shortDescription.substring(0,89)+"...":event.shortDescription%>
+                                                                </p>
+                                                            </div>
+                                                            <div><span class="btn-more"> <a
+                                                                        href="/details/<%= event._id%>"
+                                                                        class="ready-btn">xem thêm</a> </span></div>
+                                                        </div>
+                                                        <!-- Start single blog -->
+                                                    </div>
+                                                    <%}}%>
+                                                </div>
+                                                <%}%>
+                            <a href="/blog">
+                                <button type="button" id="btn-more-big" class="ready-btn mx-auto auto-center my-5">Xem thêm <i class="fas fa-angle-right"></i>
+                                </button>
+                            </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
     <!-- Start reviews Area -->
     <!-- <div class="reviews-area hidden-xs"><div class="work-us">  <div class="work-left-text"><a href="#">  <img src="img/about/2.jpg" alt=""></a>  </div>  <div class="work-right-text text-center"><h2>working with us</h2><h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5><a href="#contact" class="ready-btn">Liên hệ với chúng tôi ngay</a>  </div></div>  </div> -->
     <!-- End reviews Area -->
@@ -533,55 +534,56 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                         <div class="awesome-menu ">
                                                             <ul class="project-menu">
-                                                                <li> <a href="#" class="active" data-filter="*">Tất cả</a>
+                                                                <li> <a href="#" class="active" data-filter="*">Tất
+                                                                        cả</a>
                                                                 </li>
                                                                 <%for(type of types){%>
                                                                 <li>
                                                                     <% if (type=="drink"){%>
-                                                                        <a href="#" data-filter=".<%=type%>">Thức uống</a>
+                                                                    <a href="#" data-filter=".<%=type%>">Thức uống</a>
                                                                     <%} else if (type=="food"){%>
-                                                                        <a href="#" data-filter=".<%=type%>">Đồ ăn</a>
+                                                                    <a href="#" data-filter=".<%=type%>">Đồ ăn</a>
                                                                     <%} else if (type=="souvenir"){%>
-                                                                        <a href="#" data-filter=".<%=type%>">Quà lưu niệm</a>
+                                                                    <a href="#" data-filter=".<%=type%>">Quà lưu
+                                                                        niệm</a>
                                                                     <%} else{%>
-                                                                        <a href="#" data-filter=".<%=type%>"><%=type%></a>
+                                                                    <a href="#" data-filter=".<%=type%>"><%=type%></a>
                                                                     <%}%>
                                                                 </li>
                                                                 <%}%>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="awesome-project-content">
-                            <%for(product of products){ if(product.available===true){%>
-                                                                <!-- single-awesome-project start -->
-                                                                <div
-                                                                    class="col-md-4 col-sm-4 col-xs-12 design <%=product.typename%>">
-                                                                    <div class="single-awesome-project">
-                                                                        <div class="awesome-img"> <a href="#"><img
-                                                                                    src="<%=product.image%>"
-                                                                                    alt="" /></a>
-                                                                            <div class="add-actions text-center">
-                                                                                <div class="project-dec">
-                                                                                    <h4>
-                                                                                        <%=product.name%>
-                                                                                    </h4>
-                                                                                    <span><%=product.price%>₫</span>
-                                                                                    <br><br>
-                                                                                    <button
-                                                                                        class="btn btn-info round btn-buy rounded mb-2"
-                                                                                        type="button"
-                                                                                        id="<%=product._id%>">Mua</button>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="awesome-project-content">
+                                                    <%for(product of products){ if(product.available===true){%>
+                                                    <!-- single-awesome-project start -->
+                                                    <div
+                                                        class="col-md-4 col-sm-4 col-xs-12 design <%=product.typename%>">
+                                                        <div class="single-awesome-project">
+                                                            <div class="awesome-img"> <a href="#"><img
+                                                                        src="<%=product.image%>" alt="" /></a>
+                                                                <div class="add-actions text-center">
+                                                                    <div class="project-dec">
+                                                                        <h4>
+                                                                            <%=product.name%>
+                                                                        </h4>
+                                                                        <span><%=product.price%>₫</span>
+                                                                        <br><br>
+                                                                        <button
+                                                                            class="btn btn-info round btn-buy rounded mb-2"
+                                                                            type="button"
+                                                                            id="<%=product._id%>">Mua</button>
 
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- single-awesome-project end -->
-                                                                <%}}%>
+                                                            </div>
                                                         </div>
-                                                        <%}%>
+                                                    </div>
+                                                    <!-- single-awesome-project end -->
+                                                    <%}}%>
+                                                </div>
+                                                <%}%>
             </div>
         </div>
     </div>
