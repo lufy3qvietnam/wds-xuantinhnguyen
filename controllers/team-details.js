@@ -8,5 +8,5 @@ module.exports.loadPost = function(req,res,next){
             if(err2) return res.send('loaded error' + err2);
             return res.render('team-details', {team : data, teams : teams_data});
         })
-    }).sort({ _id: -1 }).limit(5)
+    }).sort({ _id: -1 }).limit(10)
 }
