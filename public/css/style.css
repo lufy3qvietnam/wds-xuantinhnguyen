@@ -203,10 +203,13 @@ div#preloader {
   text-shadow: none;
 }
 .area-padding {
-  padding: 100px 0px 80px;
+  padding: 10px 0px 30px;
 }
 .area-padding-blog {
   padding: 50px 0px 0px;
+}
+.area-padding-dt {
+  padding: 100px 0px 80px;
 }
 .area-padding-2 {
   padding: 70px 0px 50px;
