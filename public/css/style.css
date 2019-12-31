@@ -1268,13 +1268,16 @@ li .fa-shopping-cart {
   color: #fff;
   display: inline-block;
   font-size: 24px;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   overflow: hidden;
   padding: 2px;
 }
 .quate:hover {
   color: #fff;
+}
+.single-testi {
+  padding-top: 20px;
 }
 .testi-img img {
   border: 1px dotted rgba(0, 0, 0, 0.05);
