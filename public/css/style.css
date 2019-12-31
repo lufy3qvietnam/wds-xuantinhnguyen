@@ -2333,6 +2333,14 @@ li .fa-shopping-cart {
     text-decoration: none;
 }
 
+.form-teams {
+    height: 600px;
+    width: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .post-img {
     display: inline-block;
     float: left;

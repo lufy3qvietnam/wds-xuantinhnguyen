@@ -119,7 +119,7 @@
                                     <div>
                                         <div>
                                             <% if (each_team.image) {%>
-                                                <a href="/team-details/<%= each_team._id %>"><img src="<%= each_team.image %>" alt="Banner"></a>
+                                                <a href="/team-details/<%= each_team._id %>"><img class="form-teams" src="<%= each_team.image %>" alt="Banner"></a>
                                                 <% } else { %>
                                                     <a><img src="/img/banner-default.jpg" alt="Banner"></a>
                                                     <% } %>
